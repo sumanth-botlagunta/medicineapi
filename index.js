@@ -13,11 +13,17 @@ app.get('/', (req, res) => {
 })
 
 app.get('/covid-medicines/', (req, res) => {
-    db.collection('covid').find({}).toArray(function (err, result) {
+    var query = {};
+    if (req.query.covidID) {
+        query = {id: Number(req.query.covidID)};
+        console.log(query);
+    }
+    db.collection('covid').find(query).toArray(function (err, result) {
         if (err) throw err;
         res.send(result);
     })
 })
+
 
 mongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
     if (err) {

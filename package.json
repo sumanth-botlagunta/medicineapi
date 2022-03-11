@@ -1,0 +1,21 @@
+{
+  "name": "mediapi",
+  "version": "1.0.0",
+  "description": "api at access medicine from the mongodb server",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "keywords": [
+    "medimax",
+    "epics",
+    "nodeapi"
+  ],
+  "author": "Sumanth",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1"
+  }
+}

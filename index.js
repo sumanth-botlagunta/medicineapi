@@ -4,7 +4,7 @@ var mongo = require("mongodb");
 const app = express();
 const port = process.env.PORT || 5000;
 const mongoClient = mongo.MongoClient;
-const url = "mongodb://localhost:27017";
+const url = "mongodb+srv://sumanth:12345@sumanth.w8xsd.mongodb.net/medimax?retryWrites=true&w=majority";
 app.use(cors());
 var db;
 
@@ -31,7 +31,7 @@ mongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
     console.log(err);
     return;
   }
-  db = client.db("medicine");
+  db = client.db("medimax");
   app.listen(port, () => {
     console.log(`Server started on port ${port}`);
   });

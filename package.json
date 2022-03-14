@@ -4,6 +4,7 @@
   "description": "api at access medicine from the mongodb server",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "npm run dev"
   },
   "keywords": [
